@@ -1,0 +1,139 @@
+
+/*  Main View */
+@media (max-width: 1200px) {
+
+.dataTables_wrapper.no-footer > #thumbs_container > .id1.context-menu.swiper-slide  {
+  background: var(--surface) !important;
+  border: 0 !important;
+  border: 1px solid var(--border) !important;
+  border-radius: 0 !important;
+  display: inline-grid ;
+  grid-template-columns: 56px minmax(0, 1fr) !important;
+  grid-template-rows: auto auto auto !important; 
+  column-gap: 12px !important;
+  width: 50% !important;
+  min-height: 0 !important;
+  margin: 0 !important;
+  padding: 14px 16px !important;
+  vertical-align: top !important;
+  text-align: left !important;
+  box-sizing: border-box !important;
+  transition: background .12s ease !important;
+}
+
+.dataTables_wrapper.no-footer > #thumbs_container > .id1.context-menu.swiper-slide:hover {
+  background: var(--bg) !important;
+	transisiton: 2s;
+  border: 1px solid var(--blue) !important;	
+  text-wrap: pretty;
+  overflow: visible;
+  }
+
+/*
+ * Shared-media post layout.
+ * The archive thumbnail becomes the large media attachment beneath
+ * the post header, similar to an image/video post on X.
+ */
+.dataTables_wrapper.no-footer > #thumbs_container > .context-menu.swiper-slide > .id3 {
+  grid-column-start: 1 !important;
+  grid-column-end: 3 !important;
+  grid-row: 3 !important;
+  width: 100% !important;
+  height: auto !important;
+  min-height: 180px !important;
+  margin: 10px 0 8px !important;
+  overflow: hidden !important;
+/*  border-radius: 16px !important;
+  background: var(--subtle) !important;
+  border: 1px solid var(--border) !important; */
+  text-align: center !important;
+  position: relative !important;
+}
+
+.dataTables_wrapper.no-footer > #thumbs_container > .context-menu.swiper-slide > .id3 img {
+  width: 100% !important;
+  height: auto !important;
+  max-width: 100% !important;
+  max-height: 620px !important;
+  object-fit: contain !important;
+  border-radius: 15px !important;
+  margin: 0 auto !important;
+  display: block !important;
+}
+.dataTables_wrapper.no-footer > #thumbs_container > .context-menu.swiper-slide > .id3::after {
+	content: "";
+	position: absolute;
+	top: 35%;
+	left: 0;
+	width: 100%;
+	height: 70%;
+	background: linear-gradient(#00000000, var(--surface) 85%); 
+  transition: translate 2s ease;
+}
+.dataTables_wrapper.no-footer > #thumbs_container > .context-menu.swiper-slide > .id3:hover::after{
+  transform: translateY(50px); 
+}
+
+/* Keep very wide/tall media from making the feed enormous. */
+.dataTables_wrapper.no-footer > #thumbs_container > .context-menu.swiper-slide > .id3:has(img) {
+  aspect-ratio: 5 / 2 !important;
+}
+
+.dataTables_wrapper.no-footer > #thumbs_container > .context-menu.swiper-slide > .id3 img {
+  height: 100% !important;
+  object-fit: cover !important;
+}
+
+/* Title becomes the post header above the shared media. */
+.dataTables_wrapper.no-footer > #thumbs_container > .context-menu.swiper-slide > .id2 {
+  grid-column-start: 1 !important;
+  grid-column-end: 3 !important;
+  grid-row: 1 !important;
+  width: auto !important;
+  min-height: 0 !important;
+  margin: 0 !important;
+  padding: 0 !important;
+  text-align: left !important;
+  overflow: hidden !important;
+}
+
+
+.dataTables_wrapper.no-footer > #thumbs_container > .context-menu.swiper-slide > .id2 a {
+  color: var(--text) !important;
+  font-size: 18px !important;
+  line-height: 2.35 !important;
+  font-weight: 800 !important;
+  display: block !important;
+  overflow: hidden !important;
+  text-overflow: ellipsis !important;
+  white-space: nowrap !important;
+}
+
+.dataTables_wrapper.no-footer > #thumbs_container > .context-menu.swiper-slide > .id2 a:hover {
+  color: var(--blue) !important;
+  text-wrap: pretty;
+  overflow: visible;
+  }
+
+/* Metadata/action row below the media. */
+.dataTables_wrapper.no-footer > #thumbs_container > .context-menu.swiper-slide > .id4 {
+  grid-column: 2 !important;
+  grid-row: 2 !important;
+  width: auto !important;
+  height: auto !important;
+  min-height: 28px !important;
+  margin: 2px 0 0 !important;
+  padding: 0 !important;
+  text-align: left !important;
+  color: var(--muted) !important;
+  overflow: hidden !important;
+  display: flow !important;
+  font-size: 12px;
+}
+
+/* Existing archive link wrapper follows the media. */
+div.id1 > a {
+  grid-column: 2 !important;
+  grid-row: 2 !important;
+}
+  }

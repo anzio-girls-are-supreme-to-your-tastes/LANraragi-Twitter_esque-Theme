@@ -1,0 +1,565 @@
+/*
+ * Twitter Style Lanraragi Theme
+ */
+@import url("Twitter-Style/Sidepane.css");
+@import url("Twitter-Style/Main-Full.css"); 
+@import url("Twitter-Style/Main-Wide.css"); 
+@import url("Twitter-Style/Main-Compact.css"); 
+@import url("Twitter-Style/Toasts.css");
+
+/* ____ Actually Good looking Themes ____ */
+/* @import url("colorsheets/blue.css"); */
+/* @import url("colorsheets/blue2.css"); */
+ @import url("colorsheets/midnight.css"); 
+ 
+
+/* ---------- Base ---------- */
+html,
+body {
+  background: var(--bg) !important;
+  color: var(--text) !important;
+}
+
+body {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif !important;
+  font-size: 15px !important;
+  line-height: 1.35 !important;
+  text-align: left !important;
+  margin: 0 !important;
+  padding: 0 !important;
+}
+
+a {
+  color: var(--text);
+  text-decoration: none !important;
+}
+
+a:hover {
+  color: var(--blue) !important;
+}
+
+p {
+  margin: 0;
+  padding: 3px 1px;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  color: var(--text) !important;
+  font-weight: 800 !important;
+}
+
+/* ---------- Main shell ---------- */
+
+div.ido {
+  background: var(--surface) !important;
+  border: 1px solid var(--border) !important;
+  border-radius: 0 !important;
+  box-shadow: none !important;
+/*  max-width: 800px !important; */
+  width: 66% !important;
+  margin-left: 1%   !important;
+  padding: 0 !important;
+}
+
+
+/* ---------- Header / navigation ---------- */
+
+.logo-container {
+  background: var(--surface) !important;
+  border-bottom: 1px solid var(--border) !important;
+}
+
+p#nb {
+  min-height: 52px;
+  display: flex !important;
+  align-items: center;
+  justify-content: center;
+  gap: 4px;
+  margin: 0 !important;
+  padding: 4px 12px !important;
+  border-bottom: 1px solid var(--border);
+  white-space: normal;
+}
+
+p#nb a {
+  color: var(--text) !important;
+  font-size: 15px;
+  font-weight: 700 !important;
+  padding: 10px 14px;
+  border-radius: 9999px;
+}
+
+p#nb a:hover {
+  background: rgba(29,155,240,.10) !important;
+  color: var(--blue) !important;
+}
+
+p#nb img {
+  display: none !important;
+}
+/* favtags */
+table.itc {
+    margin: auto;
+}
+
+.favtag-btn {
+   font-size: 10pt;
+    min-width: 150px;
+    height: 25px;
+    border-radius: 3px;
+    margin: 4px;
+    padding: 0px;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+.favtag-btn:hover {
+    background: var(--blue) !important;
+    border: 1px solid var(--border) !important;
+    color: var(--bg) !important;
+}
+
+.toggled, .favtag-btn.toggled {
+    background: var(--border) !important;
+    border: 1px solid var(--blue) !important;
+    color: var(--text) !important;
+}
+/* ---------- Search ---------- */
+
+#search-input {
+  width: min(92%, 620px) !important;
+  height: 44px !important;
+  box-sizing: border-box !important;
+  margin: 12px auto !important;
+  display: block !important;
+  padding: 0 18px !important;
+  border: 1px solid transparent !important;
+  border-radius: 9999px !important;
+  background: var(--subtle) !important;
+  color: var(--text) !important;
+  font-size: 15px !important;
+  outline: none !important;
+}
+
+#search-input:focus {
+  background: var(--surface) !important;
+  border-color: var(--blue) !important;
+  box-shadow: 0 0 0 1px var(--blue) !important;
+}
+
+.stdinput,
+.tagger {
+  background: var(--subtle) !important;
+  border: 1px solid transparent !important;
+  color: var(--text) !important;
+  border-radius: 9999px !important;
+  box-shadow: none !important;
+}
+
+.stdinput:focus {
+  background: var(--surface) !important;
+  border-color: var(--blue) !important;
+  color: var(--text) !important;
+}
+
+/* ---------- Buttons ---------- */
+
+.stdbtn,
+button,
+input[type="button"] {
+     background: var(--bg) !important;
+    border: 1px solid var(--border) !important;
+    color: var(--text) !important;
+  border-radius: 9999px !important;
+  font-weight: 798 !important;
+	font-size: large;
+  min-height: 48px;
+  padding: 0 18px !important;
+  cursor: pointer;
+	margin: 4px;
+}
+.stdbtn:focus,
+button:focus,
+input[type="submit"] {
+     background: var(--surface) !important;
+    border: 1px solid var(--blue) !important;
+    color: var(--text) !important;
+  min-width: 120px;
+}
+.stdbtn:hover,
+button:hover,
+input[type="button"]:hover,
+input[type="submit"]:hover {
+  background: var(--surface) !important;
+    border: 1px solid var(--blue) !important;
+  color: var(--text) !important;
+}
+
+.searchbtn {
+  background: var(--blue) !important;
+  color: #fff !important;
+}
+
+.searchbtn:hover {
+  background: var(--blue-hover) !important;
+}
+
+/* ---------- Feed header / section titles ---------- */
+
+h1.ih {
+  color: var(--text) !important;
+  font-size: 20px !important;
+  font-weight: 800 !important;
+  text-align: left !important;
+  margin: 0 !important;
+  padding: 16px 18px !important;
+  border-bottom: 1px solid var(--border);
+}
+
+p.ip {
+  color: var(--muted) !important;
+  text-align: center !important;
+  padding: 12px !important;
+}
+ 
+
+/* ---------- FEED: thumbnail view ---------- */
+/*
+ * v0.9.81's thumbnail theme uses:
+ *   .id1 = archive card
+ *   .id2 = title
+ *   .id3 = thumbnail
+ *   .id4 = small metadata/action row
+ */
+#category-container {
+	width: 26%;
+	position: fixed;
+	right: 1%;
+	top: 7%;
+	font-size: larger;
+  border: 1px solid var(--border) !important;
+  border-radius: 8px !important;
+	padding: 40px 22px;
+	display: flex;
+    flex-direction: column;
+    align-content: space-around;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+#catdropdown {
+	width: 90%;
+	border-radius: 22px;
+	height: 38px; 
+    background: var(--bg) !important;
+    border: 1px solid var(--border) !important;
+    color: var(--text) !important;
+}
+#catdropdown:hover {
+    background: var(--surface) !important;
+    border: 1px solid var(--blue) !important;
+    color: var(--text) !important;
+}
+/* awesomplete */
+.awesomplete>ul {
+    background: var(--bg);
+    border-radius: 0px;
+    box-shadow: none;
+}
+
+.awesomplete>ul::before {
+    background: var(--bg);
+}
+
+.awesomplete>ul>li:hover,
+.awesomplete>ul>li[aria-selected="true"] {
+    color: inherit;
+    background: var(--bg);
+}
+
+.awesomplete li:hover mark,
+.awesomplete li[aria-selected="true"] mark {
+      background: var(--bg);
+}
+.awesomplete {
+	display: inline-table;
+	position: relative;
+	width: 50%;
+	z-index: 99;
+}
+.awesomplete mark {
+	color: var(--blue);
+    background: var(--bg);
+}
+.awesomplete > ul {
+	background: var(--bg);
+	color: var(--muted);
+	border: 1px solid var(--border) !important;
+	border-radius: 8px !important;
+	padding: 40px 22px;
+	z-index: 100;
+}
+.awesomplete>ul>li:hover, .awesomplete>ul>li[aria-selected="true"] {
+	color: var(--text);
+}
+
+
+#apply-search, #clear-search, #msm-toggle {
+	position:sticky;
+
+}
+#apply-search { display: none; right: 22%; }
+#clear-search { right: 7%; }
+#msm-toggle {  right: 21%; }
+
+.table-options {
+	display: flex;
+	font-size: xx-small;
+}
+.dataTables_info {
+	position: relative;
+	font-size: medium;
+}
+.top {
+	display: flex;
+	position:relative;
+	justify-content: space-evenly;
+	align-items: center;
+}
+ 
+/* ---------- Tags ---------- */
+
+div.gt {
+  float: none !important;
+  display: inline-block !important;
+  background: transparent !important;
+  border: 0 !important;
+  color: var(--blue) !important;
+  border-radius: 0 !important;
+  margin: 2px 5px 2px 0 !important;
+  padding: 0 !important;
+  font-size: 13px !important;
+  line-height: 18px !important;
+  font-weight: 400 !important;
+}
+
+div.gt:hover {
+  background: transparent !important;
+  color: var(--blue-hover) !important;
+  text-decoration: underline !important;
+}
+
+/* ---------- List / compact mode ---------- */
+
+table.itg {
+  width: 100% !important;
+  max-width: 720px !important;
+  margin: 0 auto !important;
+  border: 0 !important;
+  border-collapse: collapse !important;
+  background: var(--surface) !important;
+  color: var(--text) !important;
+}
+
+table.itg th {
+  background: var(--surface) !important;
+  color: var(--muted) !important;
+  border-bottom: 1px solid var(--border) !important;
+  border-top: 0 !important;
+  padding: 12px !important;
+  font-weight: 700 !important;
+}
+
+tr.gtr,
+tr.gtr0,
+tr.gtr1 {
+  background: var(--surface) !important;
+  border-bottom: 1px solid var(--border) !important;
+}
+
+tr.gtr:hover,
+tr.gtr0:hover,
+tr.gtr1:hover {
+  background: var(--hover) !important;
+}
+
+td.itd,
+td.itu,
+td.itdc {
+  border-color: var(--border) !important;
+  color: var(--text) !important;
+  padding: 12px !important;
+}
+
+/* ---------- Pagination ---------- */
+
+.paginate_button {
+  color: var(--text) !important;
+  border-radius: 12% !important;
+  margin: 8px 2px !important;
+  padding: 5px 9px !important;
+  width: auto !important;
+  height: auto !important;
+  font-size: 15px !important;
+}
+
+.paginate_button:hover {
+  border: 1px solid var(--hover) !important;
+}
+
+.paginate_button.current {
+ background: var(--surface) !important;
+ border: 1px solid var(--blue) !important;
+  font-weight: 800 !important;
+}
+.ellipsis {
+    display: inline-block;
+    text-align: center;
+    height: 15px;
+    width: 32px;
+    background: var(--surface);
+    cursor: pointer;
+    border: 1px solid var(--border);
+    padding: 2px 0px 10px 0px; 
+    margin-bottom: 6px;
+  border-radius: 12% !important;
+}
+/* ---------- Menus / popups ---------- */
+
+.context-menu-list,
+.caption,
+.option-flyout,
+.tippy-content,
+.swal2-popup {
+  background: var(--surface) !important;
+  color: var(--text) !important;
+  border: 1px solid var(--border) !important;
+  border-radius: 14px !important;
+  box-shadow: 0 8px 28px rgba(0,0,0,.18) !important;
+}
+
+.context-menu-item {
+  color: var(--text) !important;
+  border-radius: 10px !important;
+}
+
+.context-menu-item.context-menu-hover {
+  background: var(--hover) !important;
+  color: var(--blue) !important;
+}
+
+
+/* ---------- Reader ---------- */
+
+div.sni {
+  background: var(--bg) !important;
+  width: 95% !important;
+  margin: auto;
+    overflow-x: hidden;
+
+}
+
+div.sn {
+  background: var(--bg) !important;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: center;
+  align-items: center;
+}
+ 
+div.sni img {
+    vertical-align: middle;
+}
+/* Hides the next few divs */
+#i2 {
+	display: none;
+}
+#archive-title, .file-info {
+	color: var(--muted) !important;
+}
+.absolute-options.absolute-left, .absolute-options.absolute-right {
+	color: var(--muted) !important;
+}
+#i4, #i5, #i6, #i7 {
+	color: var(--muted) !important;
+}
+.fa-angle-down::before {
+	content: "𓉞" !important;
+	font-size: 30px;
+}
+.sb, .fa-angle-down::before{
+    left: 50%;
+    position: relative;
+}
+.page-overlay {
+	background: var(--bg);
+	border-radius: 12px;
+}
+
+/*
+#pages-section{
+    display: inline-flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    align-content: center;
+    align-items: center;
+    justify-content: center;
+}
+#pages-section > .id3 {
+	aspect-ratio: auto;
+}
+.page-number {
+	position: relative !important;
+	font-size: 20px !important;
+	color: var(--blue-hover) !important;
+	opacity: 0;
+}
+.bottom, .top {
+	margin: 12px;
+}
+.quick-thumbnail:hover > .page-number {
+	background-color: var(--bg) !important;
+	opacity: 1;
+}  */
+/* ---------- Scrollbars ---------- */
+
+* {
+  scrollbar-width: thin;
+  scrollbar-color: var(--muted) transparent;
+}
+
+*::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+*::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+*::-webkit-scrollbar-thumb {
+  background: var(--muted);
+  border-radius: 9999px;
+}
+
+/* File upload bar -- Bullet shaped */
+.bar {
+  background: linear-gradient( to right, var(--blue-hover), var(--surface));
+  width: 60px !important;
+  height: 16px !important;
+  border-radius: 50% !important;
+ }
+/* The fucking Pop up after an update */
+.small-overlay {
+	left: 20%;
+	width: 60% !important;
+	overflow-y: scroll;
+	max-height: 90vh;
+	background: var(--bg);
+}
+#changelog img {
+	width: fit-content;
+	height: 150px;
+}

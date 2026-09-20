@@ -1,0 +1,167 @@
+/*
+ * Shared-media post layout.
+ * The archive thumbnail becomes the large media attachment beneath
+ * the post header, similar to an image/video post on X.
+ */
+ /* Side View Popout */
+	
+ .swiper-wrapper > .swiper-slide > .id1.context-menu.swiper-slide {
+  background: var(--surface) !important;
+  border: 0 !important;
+  border-bottom: 1px solid var(--border) !important;
+  border-radius: 0 !important;
+  display: inline-grid ;
+  grid-template-rows: auto auto !important; 
+  column-gap: 12px !important;
+  width: 100% !important;
+  min-height: 0 !important;
+  margin: 0 !important;
+  padding: 14px 16px !important;
+  vertical-align: top !important;
+  text-align: left !important;
+  box-sizing: border-box !important;
+  transition: background .12s 3s ease !important;
+}
+
+.swiper-wrapper > .swiper-slide > .id1.context-menu.swiper-slide:hover {
+  background: var(--surface) !important;
+  border-bottom: 1px solid var(--blue) !important;
+  transition: background .25s 2s ease !important;
+  text-wrap: pretty;
+  overflow: visible;
+  }
+
+
+ 
+ .swiper-wrapper > .swiper-slide > .id1.context-menu.swiper-slide > .id3 {
+  grid-row: 2 !important;
+  width: 100% !important;
+  height: auto !important;
+  min-height: 180px !important;
+  margin: 10px 0 8px !important;
+  overflow: hidden !important;
+  border-radius: 16px !important;
+  background: var(--subtle) !important;
+  border: 1px solid var(--border) !important;
+  text-align: center !important;
+  position: relative !important;
+}
+
+ .swiper-wrapper > .swiper-slide > .id1.context-menu.swiper-slide > .id3 img {
+  width: 100% !important;
+  height: auto !important;
+  max-width: 100% !important;
+  max-height: 620px !important;
+  object-fit: contain !important;
+  border-radius: 15px !important;
+  margin: 0 auto !important;
+  display: block !important;
+}
+
+/* Keep very wide/tall media from making the feed enormous. */
+ .swiper-wrapper > .swiper-slide > .id1.context-menu.swiper-slide > .id3:has(img) {
+  aspect-ratio: 4 / 5 !important;
+}
+
+ .swiper-wrapper > .swiper-slide > .id1.context-menu.swiper-slide > .id3 img {
+  height: 100% !important;
+  object-fit: cover !important;
+}
+
+/* Title becomes the post header above the shared media. */
+ .swiper-wrapper > .swiper-slide > .id1.context-menu.swiper-slide > .id2 {
+  grid-row: 1 !important;
+  width: auto !important;
+  min-height: 0 !important;
+  margin: 0 !important;
+  padding: 0 !important;
+  text-align: left !important;
+  overflow: hidden !important;
+}
+
+
+ .swiper-wrapper > .swiper-slide > .id1.context-menu.swiper-slide > .id2 a {
+  color: var(--text) !important;
+  font-size: 16px !important;
+  line-height: 1.35 !important;
+  font-weight: 800 !important;
+  display: block !important;
+  overflow: hidden !important;
+  text-overflow: ellipsis !important;
+  white-space: nowrap !important;
+}
+
+ .swiper-wrapper > .swiper-slide > .id1.context-menu.swiper-slide > .id2 a:hover {
+  color: var(--blue) !important;
+  text-wrap: pretty;
+  overflow: visible;
+  }
+
+/* Metadata/action row below the media. */
+ .swiper-wrapper > .swiper-slide > .id1.context-menu.swiper-slide > .id4 {
+	display: none;
+}
+
+/* The Actual Side Carousel */
+
+
+.index-carousel .collapsible-title {
+    padding: 0.5rem;
+}
+
+.collapsible-right {
+    padding: 0.2rem 0.5rem 0 0 !important;
+}
+
+.index-carousel {
+    margin-top: 0 !important;
+    margin-bottom: 12px !important;
+}
+
+.index-carousel>.option-flyout {
+    margin: 0 !important;
+}
+
+.carousel-prev {
+    padding: 4px;
+    border: 1px solid var(--border);
+    background: var(--bg);
+}
+
+.carousel-next {
+    padding: 4px;
+    border: 1px solid var(--border);
+    background: var(--bg);
+}
+
+.caption,
+.context-menu-list {
+    background: var(--bg);
+    border: 1px solid var(--border);
+}
+
+.caption-tags {
+    padding: 5px;
+    color: var(--text);
+}
+
+.tippy-arrow {
+    color: var(--text);
+}
+ .index-carousel {
+ z-index: 11;
+	position: fixed;
+	right: 1%;
+	width: 30%;
+	bottom: 1%;
+    border-radius: 14px !important;
+	background: var(--surface) !important;
+    border: 1px solid var(--border) !important;
+	transition: border 0.8s 0.1s, width 0.125s 1s;
+}
+
+.index-carousel:hover  {
+	width: 80%;
+    border: 1px solid var(--blue) !important;
+	transition: border 0.75s 0s, width 0.125s 0.75s;
+}
