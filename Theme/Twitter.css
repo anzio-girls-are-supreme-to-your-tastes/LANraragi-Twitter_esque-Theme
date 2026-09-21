@@ -425,6 +425,9 @@ td.itdc {
     margin-bottom: 6px;
   border-radius: 12% !important;
 }
+.bottom {
+	margin: 6px;
+}
 /* ---------- Menus / popups ---------- */
 
 .context-menu-list,
